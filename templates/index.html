@@ -14,11 +14,13 @@
             <button type="submit">Yükle ve Analiz Et</button>
         </form>
 
-        {% if result %}
-            <div class="result">
-                <h2>Sonuç: {{ result }}</h2>
-            </div>
-        {% endif %}
+        {% if cnn_result and vgg16_result %}
+    <div class="result">
+        <h2>CNN Model Sonucu: {{ cnn_result }}</h2>
+        <h2>VGG16 Model Sonucu: {{ vgg16_result }}</h2>
+    </div>
+{% endif %}
+
     </div>
 </body>
 </html>
